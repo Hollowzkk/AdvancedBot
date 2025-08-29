@@ -167,7 +167,21 @@ namespace AdvancedBot
             List<String> n = new List<string>();
 
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
-            string filePath = Path.Combine(basePath, "languages", Program.Config.GetStringOrDefault("program-language", "en") + ".lang");
+            string languageFolder = Path.Combine(basePath, "languages");
+
+            if (!Directory.Exists(languageFolder))
+            {
+                Directory.CreateDirectory(languageFolder);
+            }
+
+            string langFileName = Program.Config.GetStringOrDefault("program-language", "en") + ".lang";
+            string filePath = Path.Combine(languageFolder, langFileName);
+
+            
+            if (!File.Exists(filePath))
+            {
+                File.WriteAllText(filePath, "");
+            }
 
             string line;
             Debug.WriteLine(form.Name);
