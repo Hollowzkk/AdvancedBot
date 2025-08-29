@@ -46,7 +46,8 @@ namespace AdvancedBot.client
             Commands.Add(new CommandUseBow(c));
             Commands.Add(new CommandProxy(c));
             Commands.Add(new CommandBreakBlock(c));
-            Commands.Add(new CommandScript(c));
+            // Temporarily commented out due to missing CommandScript
+            // Commands.Add(new CommandScript(c));
 
             Commands.Add(new CommandAreaMiner(c));
             /*var mods = Assembly.GetCallingAssembly().GetModules(false);

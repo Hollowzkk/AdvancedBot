@@ -1,84 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4B89A5F5-A0F7-4A65-9C22-7FFC1D4194DC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdvancedBot</RootNamespace>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>false</UseWPF>
     <AssemblyName>AdvancedBot</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;_NOLINK</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup>
+    <RootNamespace>AdvancedBot</RootNamespace>
     <ApplicationIcon>icon.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.2</LangVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>false</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Jint, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Jint\bin\Release\Jint.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.8" />
+    <PackageReference Include="Jint" Version="4.4.1" />
+    <PackageReference Include="Esprima" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Management" />
@@ -93,7 +40,31 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Resources.Extensions" />
   </ItemGroup>
+
+  <!-- Temporarily commented out COM references
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  -->
+
   <ItemGroup>
     <Compile Include="About.cs">
       <SubType>Form</SubType>
@@ -101,12 +72,16 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <!-- Temporarily commented out due to COM reference issues
     <Compile Include="AboutNew.cs">
       <SubType>Form</SubType>
     </Compile>
+    -->
+    <!-- Temporarily commented out due to COM reference issues
     <Compile Include="AboutNew.Designer.cs">
       <DependentUpon>AboutNew.cs</DependentUpon>
     </Compile>
+    -->
     <Compile Include="BanCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,7 +148,9 @@
     <Compile Include="Client\Commands\CommandProxy.cs" />
     <Compile Include="Client\Commands\CommandReco.cs" />
     <Compile Include="Client\Commands\CommandRetard.cs" />
+    <!-- Temporarily commented out due to missing script context classes
     <Compile Include="Client\Commands\CommandScript.cs" />
+    -->
     <Compile Include="Client\Commands\CommandTwerk.cs" />
     <Compile Include="Client\Commands\CommandUseBow.cs" />
     <Compile Include="Client\Commands\CommandUseEntity.cs" />
@@ -185,19 +162,6 @@
     <Compile Include="Client\Handler\Handler_v19.cs" />
     <Compile Include="Client\HttpConnection.cs" />
     <Compile Include="Client\Map\LinearBlockGetter.cs" />
-    <EmbeddedResource Include="AboutNew.resx">
-      <DependentUpon>AboutNew.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Client\Bypassing\DreamcraftCaptchaForm.resx">
-      <DependentUpon>DreamcraftCaptchaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginSettings.resx">
-      <DependentUpon>LoginSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Viewer\ViewForm.resx">
-      <DependentUpon>ViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Client\NBT\NBT.cs_" />
     <Compile Include="Client\PacketLogger.cs" />
     <Compile Include="Client\PacketStream.cs" />
     <Compile Include="Client\LookInterpolator.cs" />
@@ -263,12 +227,14 @@
     <Compile Include="Json\Node.cs" />
     <Compile Include="Json\Value.cs" />
     <Compile Include="Json\With.cs" />
+    <!-- Temporarily commented out due to namespace conflicts
     <Compile Include="MacroEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MacroEditor.Designer.cs">
       <DependentUpon>MacroEditor.cs</DependentUpon>
     </Compile>
+    -->
     <Compile Include="MaxMindDB\BigInteger.cs" />
     <Compile Include="MaxMindDB\BigIntegerJsonConverter.cs" />
     <Compile Include="MaxMindDB\Decoder.cs" />
@@ -379,9 +345,15 @@
     <Compile Include="Script\FastColoredTextBox\VisualMarker.cs" />
     <Compile Include="Script\IScriptContext.cs" />
     <Compile Include="Script\JsScriptBindings.cs" />
+    <!-- Temporarily commented out due to version compatibility issues
     <Compile Include="Script\JsScriptContext.cs" />
+    -->
+    <!-- Temporarily commented out due to version compatibility issues
     <Compile Include="Script\JsResolver.cs" />
+    -->
+    <!-- Temporarily commented out due to version compatibility issues
     <Compile Include="Script\ScriptContext.cs" />
+    -->
     <Compile Include="SetPrefixForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,7 +367,9 @@
     <Compile Include="AccountChecker.Designer.cs">
       <DependentUpon>AccountChecker.cs</DependentUpon>
     </Compile>
+    <!-- Temporarily commented out due to COM reference issues
     <Compile Include="SurroundingClass.cs" />
+    -->
     <Compile Include="TestServer.cs" />
     <Compile Include="Controls\UserListBox.cs">
       <SubType>Component</SubType>
@@ -457,7 +431,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
+    <!-- Temporarily commented out AssemblyInfo.cs
     <Compile Include="Properties\AssemblyInfo.cs" />
+    -->
     <Compile Include="Client\Proxy.cs" />
     <Compile Include="ProxyCheckerForm.cs">
       <SubType>Form</SubType>
@@ -553,9 +529,15 @@
     <Compile Include="Zlib\ZlibCodec.cs" />
     <Compile Include="Zlib\ZlibConstants.cs" />
     <Compile Include="Zlib\ZlibStream.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutNew.resx">
+      <DependentUpon>AboutNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BanCheck.resx">
       <DependentUpon>BanCheck.cs</DependentUpon>
@@ -563,8 +545,14 @@
     <EmbeddedResource Include="Changelog.resx">
       <DependentUpon>Changelog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client\Bypassing\DreamcraftCaptchaForm.resx">
+      <DependentUpon>DreamcraftCaptchaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilterCountryForm.resx">
       <DependentUpon>FilterCountryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginSettings.resx">
+      <DependentUpon>LoginSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Movement.resx">
       <DependentUpon>Movement.cs</DependentUpon>
@@ -626,17 +614,16 @@
     <EmbeddedResource Include="AccountChecker.resx">
       <DependentUpon>AccountChecker.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <EmbeddedResource Include="Viewer\ViewForm.resx">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Zlib\LICENSE.jzlib.txt" />
+    <Content Include="Zlib\License.zlib.txt" />
     <None Include="Resources\BannerPatterns.zip" />
     <None Include="Resources\flags.csv" />
     <None Include="Resources\itemmap.csv.zlib" />
@@ -646,75 +633,31 @@
     <None Include="Resources\states.json" />
     <None Include="Resources\states.zlib" />
     <None Include="Resources\texturemap.csv.zlib" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="icon.ico" />
     <None Include="Resources\flags.png" />
     <None Include="Resources\discord.png" />
     <None Include="Resources\changelog.png" />
     <None Include="Resources\about.png" />
     <None Include="Resources\discord1.png" />
-    <Content Include="Resources\logo.png" />
     <None Include="Resources\steve.png" />
-    <Content Include="Zlib\LICENSE.jzlib.txt" />
-    <Content Include="Zlib\License.zlib.txt" />
     <None Include="Resources\inv_slots.png" />
     <None Include="Resources\item_blocks.png" />
     <None Include="Resources\debug_textures_items.png" />
     <None Include="Resources\debug_textures_blocks.png" />
     <None Include="Resources\ascii.png" />
     <None Include="Resources\folder-icon.png" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2018.3</PostBuildEvent>
-  </PropertyGroup>
+
 </Project>

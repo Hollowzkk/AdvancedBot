@@ -1,0 +1,150 @@
+# AdvancedBot Language File - English
+# Main Form
+Main.Connect=Connect
+Main.Disconnect=Disconnect
+Main.Username=Username
+Main.Password=Password
+Main.Server=Server
+Main.Port=Port
+Main.Status=Status
+Main.Connected=Connected
+Main.Disconnected=Disconnected
+Main.Connecting=Connecting...
+
+# About Form
+AboutNew.Title=About AdvancedBot
+AboutNew.Version=Version
+AboutNew.Copyright=Copyright
+AboutNew.Description=Advanced Minecraft Bot
+
+# Changelog Form
+Changelog.Title=Changelog
+Changelog.Version=Version
+Changelog.Changes=Changes
+
+# Statistics Form
+Statistics.Title=Statistics
+Statistics.Users=Users
+Statistics.Servers=Servers
+Statistics.Total=Total
+
+# Proxy Form
+ProxyForm.Title=Proxy Settings
+ProxyForm.Add=Add
+ProxyForm.Remove=Remove
+ProxyForm.Test=Test
+ProxyForm.Host=Host
+ProxyForm.Port=Port
+ProxyForm.Username=Username
+ProxyForm.Password=Password
+
+# Ban Check Form
+BanCheck.Title=Ban Check
+BanCheck.Check=Check
+BanCheck.Username=Username
+BanCheck.Result=Result
+
+# Account Checker Form
+AccountChecker.Title=Account Checker
+AccountChecker.Check=Check
+AccountChecker.Username=Username
+AccountChecker.Password=Password
+AccountChecker.Result=Result
+
+# Spammer Form
+Spammer.Title=Spammer
+Spammer.Start=Start
+Spammer.Stop=Stop
+Spammer.Message=Message
+Spammer.Delay=Delay
+
+# Ranking Form
+Ranking.Title=Ranking
+Ranking.Position=Position
+Ranking.Username=Username
+Ranking.Score=Score
+
+# Miner Options Form
+MinerOptions.Title=Miner Options
+MinerOptions.Start=Start
+MinerOptions.Stop=Stop
+MinerOptions.Range=Range
+MinerOptions.Speed=Speed
+
+# Macro Editor Form
+MacroEditor.Title=Macro Editor
+MacroEditor.New=New
+MacroEditor.Open=Open
+MacroEditor.Save=Save
+MacroEditor.Run=Run
+MacroEditor.Stop=Stop
+
+# Commands
+Command.Help=Help
+Command.Move=Move
+Command.Follow=Follow
+Command.Goto=Go to
+Command.Miner=Miner
+Command.ClearChat=Clear Chat
+Command.DropAll=Drop All
+Command.Give=Give
+Command.KillAura=Kill Aura
+Command.Twerk=Twerk
+Command.UseBow=Use Bow
+Command.UseEntity=Use Entity
+Command.PlaceBlock=Place Block
+Command.BreakBlock=Break Block
+Command.ClickBlock=Click Block
+Command.InvClick=Inventory Click
+Command.HotbarClick=Hotbar Click
+Command.AntiAFK=Anti AFK
+Command.Crash=Crash
+Command.CrashNew=Crash New
+Command.Protetor=Protector
+Command.InvCaptcha=Inventory Captcha
+Command.Herbalism=Herbalism
+Command.Portal=Portal
+Command.Retard=Retard
+Command.Reco=Reco
+Command.Proxy=Proxy
+Command.PlayerList=Player List
+Command.AreaMiner=Area Miner
+
+# Messages
+Message.Connected=Connected to server
+Message.Disconnected=Disconnected from server
+Message.ConnectionFailed=Connection failed
+Message.InvalidCredentials=Invalid credentials
+Message.ServerFull=Server is full
+Message.Banned=You are banned
+Message.UnknownError=Unknown error occurred
+Message.CommandNotFound=Command not found
+Message.InvalidSyntax=Invalid syntax
+Message.MissingArgs=Missing arguments
+Message.Success=Success
+Message.Failed=Failed
+
+# Errors
+Error.ConnectionFailed=Failed to connect to server
+Error.AuthenticationFailed=Authentication failed
+Error.ServerUnreachable=Server is unreachable
+Error.InvalidServerAddress=Invalid server address
+Error.InvalidPort=Invalid port number
+Error.UsernameRequired=Username is required
+Error.PasswordRequired=Password is required
+Error.ProxyConnectionFailed=Failed to connect through proxy
+Error.FileNotFound=File not found
+Error.PermissionDenied=Permission denied
+Error.UnknownError=An unknown error occurred
+
+# Status
+Status.Connecting=Connecting...
+Status.Connected=Connected
+Status.Disconnected=Disconnected
+Status.Authenticating=Authenticating...
+Status.Joining=Joining world...
+Status.Loading=Loading...
+Status.Ready=Ready
+Status.Error=Error
+Status.Warning=Warning
+Status.Info=Information

@@ -47,7 +47,8 @@ namespace AdvancedBot
         private Color[] FormattingColors = new Color[16];
 
         public bool FrmClosed = false;
-        private AboutNew aboutForm;
+        // Temporarily commented out due to missing AboutNew form
+        // private AboutNew aboutForm;
         public Start frmStart;
 
         public ProxyList Proxies = new ProxyList();
@@ -837,7 +838,9 @@ namespace AdvancedBot
 
         private void scriptsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MacroEditor().Show();
+            // Temporarily commented out due to missing MacroEditor
+            // new MacroEditor().Show();
+            MessageBox.Show("Macro Editor temporariamente indisponível", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void desconectarTodosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -884,9 +887,11 @@ namespace AdvancedBot
 
         private void tsAbout_Click(object sender, EventArgs e)
         {
-            if (aboutForm != null && !aboutForm.IsDisposed) return;
-            aboutForm = new AboutNew();
-            aboutForm.Show();
+            // Temporarily commented out due to missing AboutNew form
+            // if (aboutForm != null && !aboutForm.IsDisposed) return;
+            // aboutForm = new AboutNew();
+            // aboutForm.Show();
+            MessageBox.Show("Sobre o AdvancedBot\nVersão: " + Program.AppVersion, "Sobre", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void tsChangelog_Click(object sender, EventArgs e)
